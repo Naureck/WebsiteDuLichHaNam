@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutHNS.cshtml";
+    var location = ViewBag.Location;
+}
+
+<div class="title-in-tour">
+    <h2>Địa điểm</h2>
+    <div class="content-in-local">
+        <p><b>Hà Nam</b> là tỉnh thuộc địa phần của Đồng bằng sông Hồng có diện tích khoảng 860 Km<sup>2</sup>. Có hơn 800.000 người dân đang sinh sống và làm việc tại đây. Nhắc đến Hà Nam, nơi đây chứa đựng nhiều di tích lịch sử mang đậm chất văn hóa Việt Nam, cùng với đó là những danh lam thắng cảnh đầy thơ mộng và hùng vĩ. Hãy cùng HNS đi khám phá vùng đất nên thơ này nhé.</p>
+    </div>
+    
+</div>
+
+<div class="bg-show-tours">
+    <div class="bg-in-tours">
+        @foreach (var item in location)
+        {
+        <div class="tags-local-bg">
+            <div class="tags-local-in ">
+                <div class="img-show-local"><img src="~/Asset/img/@item.Img" /></div>
+
+                <div class="local">
+                    <a href="../Location/Details/@item.ID"><h4>@item.TenDiaDiem</h4></a>
+                </div>
+
+                <div class="btn-booking">
+                    <a class="btn-order-tour" href="../Location/Details/@item.ID">Xem chi tiết</a>
+                </div>
+            </div>
+        </div>
+        }
+
+    </div>
+</div>
+

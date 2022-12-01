@@ -1,0 +1,104 @@
+﻿@model HaNamSite.Models.EF.DiaDiem
+
+@{
+    ViewBag.Title = "DeleteLocations";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+
+<h3>Bạn muốn xóa dòng dữ liệu này không ?</h3>
+
+<div class="container-fluid">
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Users</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.TenDiaDiem)</th>
+                            <th>@Html.DisplayNameFor(model => model.Img)</th>
+                            <th>@Html.DisplayNameFor(model => model.Mota)</th>
+                            <th>@Html.DisplayNameFor(model => model.DiaChi)</th>
+                            <th>@Html.DisplayNameFor(model => model.Status)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.DisplayFor(model => model.TenDiaDiem)</td>
+                            <td>@Html.DisplayFor(model => model.Img)</td>
+                            <td>@Html.DisplayFor(model => model.Mota)</td>
+                            <td>@Html.DisplayFor(model => model.DiaChi)</td>
+                            <td>@Html.DisplayFor(model => model.Status)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div style="margin-bottom: 64px" class="form-actions no-color">
+                        <input type="submit" value="Delete" class="btn btn-default" /> |
+                        @Html.ActionLink("Back to List", "Index")
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+@*<div>
+        <h4>DiaDiem</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TenDiaDiem)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TenDiaDiem)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Mota)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Mota)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DiaChi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DiaChi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Status)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>*@

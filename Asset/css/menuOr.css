@@ -1,0 +1,40 @@
+﻿.bg-menu-or
+{
+    background-color: #25276c;
+    width: 100%;
+    height: 80px;
+}
+
+.bg-logo-menu-or
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 auto;
+}
+
+.logo-menu-or 
+{
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-menu-or:hover
+{
+    color:white;
+    text-decoration: none;
+}
+
+.menu-or-in
+{
+     display: flex;
+    flex-direction: row;
+    width: auto;
+    /*background-color: rgba(35, 35, 35, 0.9);*/
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    margin: auto 0 auto 0;
+}

@@ -1,0 +1,364 @@
+﻿
+@{
+    ViewBag.Title = "Booking";
+    Layout = "~/Views/Shared/LayoutMenuOr.cshtml";
+}
+@model HaNamSite.Models.EF.KetNoiTours_Orders
+
+<div class="booking-tours">
+    <div class="checkout-head">
+        <div class="container">
+            <div class="row">
+                <div class="checkout-head-in">
+                    <div class="text-head-checkout active-text">1. Nhập thông tin</div>
+                    <div><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                    <div class="text-head-checkout">2. Thanh toán</div>
+                </div>
+            </div>
+        </div>
+        @using (Html.BeginForm("Booking", "Tours", FormMethod.Post))
+        {
+            @Html.HiddenFor(model => model.tours.ID)
+            <div class="container">
+                <div class="row order-info-in">
+
+                    <div class="info-guest-booking left">
+                        <div class="title-in-info"><h3>Tổng quan về khách hàng</h3></div>
+                        <div class="title-in-info2"><h4>Thông tin liên lạc</h4></div>
+
+                        <div class="info-contact-in-guest">
+                            <div class="form-info-contact-gst-bg">
+                                <div class="form-info-contact-gst">
+                                    <div class="group-form">
+                                        <div class="txt-input-info-cus">
+                                            <label>Họ và Tên</label>
+                                            @*<input type="text" />*@ @Html.EditorFor(model => model.orders.HoTen)
+                                        </div>
+                                        <div class="txt-input-info-cus">
+                                            <label>Email</label>
+                                            @*<input type="email" />*@ @Html.EditorFor(model => model.orders.Email, new { htmlAttributes = new { type = "email" } })
+                                        </div>
+                                        <div class="txt-input-info-cus">
+                                            <label>Số điện thoại</label>
+                                            @*<input type="text" />*@ @Html.EditorFor(model => model.orders.SDT, new { htmlAttributes = new { type = "text"} })
+                                        </div>
+                                        <div class="txt-input-info-cus">
+                                            <label>Địa chỉ</label>
+                                            <input type="text" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="title-in-info2"><h4>Hành Khách</h4></div>
+                        <div class="customer">
+                            <div class="change-box">
+                                <div class="change-box-title">
+                                    <h4>Người lớn</h4>
+                                    <span>> 12 tuổi</span>
+                                </div>
+                                <div class="change-box-number">
+                                    @*<span class="btn-cus"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
+                                    <span>1</span>
+                                    <span class="btn-cus"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>*@
+                                    @Html.EditorFor(model => model.orders.SoKhachLon, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+
+                            <div class="change-box">
+                                <div class="change-box-title">
+                                    <h4>Trẻ em</h4>
+                                    <span>Từ 5 - 11 tuổi</span>
+                                </div>
+                                <div class="change-box-number">
+                                    @*<span class="btn-cus"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
+                                    <span>0</span>
+                                    <span class="btn-cus"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>*@
+                                    @Html.EditorFor(model => model.orders.SoKhachTreEm, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+
+                            <div class="change-box">
+                                <div class="change-box-title">
+                                    <h4>Trẻ nhỏ</h4>
+                                    <span>Từ 2 - 4 tuổi</span>
+                                </div>
+                                <div class="change-box-number">
+                                    @*<span class="btn-cus"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
+                                    <span>0</span>
+                                    <span class="btn-cus"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>*@
+                                    @Html.EditorFor(model => model.orders.SoKhachTreNho, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+
+                            <div class="change-box">
+                                <div class="change-box-title">
+                                    <h4>Em bé</h4>
+                                    <span>Từ 0 - 2 tuổi</span>
+                                </div>
+                                <div class="change-box-number">
+                                    @*<span class="btn-cus"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
+                                    <span>0</span>
+                                    <span class="btn-cus"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>*@
+                                    @Html.EditorFor(model => model.orders.SoKhachSoSinh, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title-in-info2"><h4>Thông tin giá cả</h4></div>
+                        <div class="price-info-cus-bg">
+                            <div class="price-info-cus-in-row">
+                                <div class="price-cus-title">
+                                    <div><p>Giá người lớn: <span>5.000.000 đ</span></p></div>
+                                    <div><p>Giá trẻ em: <span>4.800.000 đ</span></p></div>
+                                </div>
+
+                                <div class="price-cus-title left-cus-price">
+                                    <div><p>Giá trẻ nhỏ: <span>4.600.000 đ</span></p></div>
+                                    <div><p>Giá em bé: <span>4.200.000 đ</span></p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="title-in-info2"><h4>Thông tin khách hàng</h4></div>
+                        <div class="customer-details-bg">
+                            <div class="customer-details-in">
+                                <table class="tbl-cus-details">
+                                    <tr class="row-in-tbl-cus-title">
+                                        <td class="txt-in-row"><p>Họ Tên</p></td>
+                                        <td class="txt-in-row"><p>Giới tính</p></td>
+                                        <td class="txt-in-row"><p>Ngày sinh</p></td>
+                                        <td class="txt-in-row"><p> </p></td>
+                                        <td class="txt-in-row"><p> </p></td>
+                                        <td class="txt-in-row"><p>Phòng riêng</p></td>
+                                    </tr>
+
+                                    <tr class="row-in-tbl-cus-title">
+                                        <td class="txt-in-row"><input class="form-control" placeholder="Vui lòng nhập họ tên" /></td>
+                                        <td class="txt-in-row"><select class="form-control" required="required"> <option selected="selected" value="-1">Giới tính</option> <option value="0">Nam</option> <option value="1">Nữ</option></select></td>
+                                        <td class="txt-in-row">
+                                            <select class="form-control" required="required">
+                                                <option>Ngày</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                            </select>
+                                        </td>
+
+                                        <td class="txt-in-row">
+                                            <select class="form-control" required="required">
+                                                <option>Tháng</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                        </td>
+
+                                        <td class="txt-in-row">
+                                            <select class="form-control" required="required">
+                                                <option>Năm</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                        </td>
+                                        <td class="txt-in-row room-check active"><input type="checkbox" checked class="form-check" /><span class="checkmark"></span> <span>@string.Format("{0:#,##0}", ViewBag.infoTours.PhuThuPhongRieng) đ</span></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="title-in-info2"><h4>Nếu quý khách cần gì thêm hãy ghi chú dưới đây</h4></div>
+                        <div class="note-by-customer-bg">
+                            <div class="note-by-customer-in">
+                                <div class="check-note-customer">
+                                    <label class="checker-mark">
+                                        Hút thuốc
+                                        <input type="checkbox" class="check-more active" />
+                                        <span class="check-box-cus"></span>
+                                    </label>
+
+                                    <label class="checker-mark">
+                                        Phòng tầng cao
+                                        <input type="checkbox" class="check-more" />
+                                        <span class="check-box-cus"></span>
+                                    </label>
+
+                                    <label class="checker-mark">
+                                        Trẻ em hiếu động
+                                        <input type="checkbox" class="check-more" />
+                                        <span class="check-box-cus"></span>
+                                    </label>
+
+                                    <label class="checker-mark">
+                                        Ăn chay
+                                        <input type="checkbox" class="check-more" />
+                                        <span class="check-box-cus"></span>
+                                    </label>
+
+                                    <label class="checker-mark">
+                                        Có người khuyết tật
+                                        <input type="checkbox" class="check-more" />
+                                        <span class="check-box-cus"></span>
+                                    </label>
+
+                                    <label class="checker-mark">
+                                        Phụ nữ có thai
+                                        <input type="checkbox" class="check-more" />
+                                        <span class="check-box-cus"></span>
+                                    </label>
+                                    <br />
+                                    <p>Ghi chú thêm</p>
+                                    <textarea class="form-control" cols="20" rows="5" placeholder="Nhập nội dung vào đây..." name="note"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-info-bg right">
+                        <div class="shortcut-info-in">
+                            <div class="shortcut-title-in-info"><h3>Tóm tắt chuyến đi</h3></div>
+                            <div class="shortcut-info-tour">
+                                <div class="shortcut-info-tour-img"><img src="~/Asset/img/@ViewBag.infoTours.Thumnail" /></div>
+                                <div class="shortcut-info-tour-title"><span>@ViewBag.infoTours.TieuDe</span></div>
+                            </div>
+
+                            <div class="shortcut-date-go">
+                                <div class="date-start">
+                                    <div><span class="ic-arrow-tours"><i class="fa fa-arrow-down" aria-hidden="true"></i></span></div>
+                                    <div>
+                                        <h4>Bắt đầu chuyến đi</h4>
+                                        <span class="date-tour">@string.Format("{0:dddd, dd/MM/yyyy}", ViewBag.infoTours.NgayKhoiHanh)</span>
+                                    </div>
+                                </div>
+                                <div class="date-end">
+                                    <div><span class="ic-arrow-tours"><i class="fa fa-arrow-down" aria-hidden="true"></i></span></div>
+                                    <div>
+                                        <h4>Kết thúc chuyến đi</h4>
+                                        <span class="date-tour">Tusday, 28/06/2022</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shortcut-details-tour">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th class="title-in-short-details font-weight-bold">Hành khách</th>
+                                            <th class="number-in-short-details">
+                                                <span>
+                                                    1 người lớn <br />
+                                                    0 trẻ em <br />
+                                                    0 trẻ nhỏ <br />
+                                                    0 em bé <br />
+                                                </span>
+                                                <p style="color:#422c7f; font-size:15px; font-weight:bold;">Tổng: 1 người</p>
+                                            </th>
+                                        </tr>
+
+                                        <tr>
+                                            <th class="title-in-short-details-small">Người lớn</th>
+                                            <th class="number-in-short-details">
+                                                <span>
+                                                    1x @string.Format("{0:#,##0}", ViewBag.infoTours.GiaNguoiLon) vnđ
+                                                </span>
+                                            </th>
+                                        </tr>
+
+                                        <tr>
+                                            <th class="title-in-short-details-small">Trẻ em</th>
+                                            <th class="number-in-short-details">
+                                                <span>
+                                                    0x @string.Format("{0:#,##0}", ViewBag.infoTours.GiaTreEm) vnđ
+                                                </span>
+                                            </th>
+                                        </tr>
+
+                                        <tr>
+                                            <th class="title-in-short-details-small">Trẻ nhỏ</th>
+                                            <th class="number-in-short-details">
+                                                <span>
+                                                    0x @string.Format("{0:#,##0}", ViewBag.infoTours.GiaTreNho) vnđ
+                                                </span>
+                                            </th>
+                                        </tr>
+
+                                        <tr>
+                                            <th class="title-in-short-details-small">Em bé</th>
+                                            <th class="number-in-short-details">
+                                                <span>
+                                                    0x @string.Format("{0:#,##0}", ViewBag.infoTours.GiaSoSinh) vnđ
+                                                </span>
+                                            </th>
+                                        </tr>
+
+                                        <tr>
+                                            <th class="title-in-short-details-small font-weight-bold">Phụ thu thêm phòng riêng:</th>
+                                            <th class="number-in-short-details">
+                                                <span>
+                                                    1x @string.Format("{0:#,##0}", ViewBag.infoTours.PhuThuPhongRieng) vnđ
+                                                </span>
+                                            </th>
+                                        </tr>
+
+                                        <tr style="border-top: 1px solid #eeeeee;">
+
+                                            <th class="title-in-short-details font-weight-bold">Tổng:</th>
+                                            <th style="font-size:18px; color:#c42222;" class="number-in-short-details">
+                                                <span>
+                                                    5,800,000 vnđ
+                                                </span>
+                                            </th>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                                @*<button class="btn btn-order-quick" type="submit">ĐẶT NGAY</button>*@
+                                <a class="btn btn-order-quick" href="@Url.Action("Payments", "Tours")" >ĐẶT NGAY</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+

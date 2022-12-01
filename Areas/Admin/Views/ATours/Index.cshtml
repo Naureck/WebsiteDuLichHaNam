@@ -1,0 +1,222 @@
+﻿@model IEnumerable<HaNamSite.Models.EF.TourDuLich>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Quản Lý Tours</h1>
+    <p class="mb-4">
+        @Html.ActionLink("Create", "CreateTours")
+    </p>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Tours Du Lịch</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.TieuDe)</th>
+                            <th>@Html.DisplayNameFor(model => model.ThoiGian)</th>
+                            <th>@Html.DisplayNameFor(model => model.NgayKhoiHanh)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoNgayDi)</th>
+                            <th>@Html.DisplayNameFor(model => model.DiaDiemKhoiHanh)</th>
+                            <th>@Html.DisplayNameFor(model => model.ChiTiet)</th>
+                            <th>@Html.DisplayNameFor(model => model.Thumnail)</th>
+                            <th>@Html.DisplayNameFor(model => model.LoaiKhachSan)</th>
+                            <th>@Html.DisplayNameFor(model => model.GiaNguoiLon)</th>
+                            <th>@Html.DisplayNameFor(model => model.GiaTreEm)</th>
+                            <th>@Html.DisplayNameFor(model => model.GiaTreNho)</th>
+                            <th>@Html.DisplayNameFor(model => model.GiaSoSinh)</th>
+                            <th>@Html.DisplayNameFor(model => model.PhuThuPhongRieng)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachToiDa)</th>
+                            <th>@Html.DisplayNameFor(model => model.LuotXem)</th>
+                            <th>@Html.DisplayNameFor(model => model.Status)</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.TieuDe)</th>
+                            <th>@Html.DisplayNameFor(model => model.ThoiGian)</th>
+                            <th>@Html.DisplayNameFor(model => model.NgayKhoiHanh)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoNgayDi)</th>
+                            <th>@Html.DisplayNameFor(model => model.DiaDiemKhoiHanh)</th>
+                            <th>@Html.DisplayNameFor(model => model.ChiTiet)</th>
+                            <th>@Html.DisplayNameFor(model => model.Thumnail)</th>
+                            <th>@Html.DisplayNameFor(model => model.LoaiKhachSan)</th>
+                            <th>@Html.DisplayNameFor(model => model.GiaNguoiLon)</th>
+                            <th>@Html.DisplayNameFor(model => model.GiaTreEm)</th>
+                            <th>@Html.DisplayNameFor(model => model.GiaTreNho)</th>
+                            <th>@Html.DisplayNameFor(model => model.GiaSoSinh)</th>
+                            <th>@Html.DisplayNameFor(model => model.PhuThuPhongRieng)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachToiDa)</th>
+                            <th>@Html.DisplayNameFor(model => model.LuotXem)</th>
+                            <th>@Html.DisplayNameFor(model => model.Status)</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        { 
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.TieuDe)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ThoiGian)</td>
+                            <td>@Html.DisplayFor(modelItem => item.NgayKhoiHanh)</td>
+                            <td>@Html.DisplayFor(modelItem => item.SoNgayDi)</td>
+                            <td>@Html.DisplayFor(modelItem => item.DiaDiemKhoiHanh)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ChiTiet)</td>
+                            <td><img width="209px" height="209px" src="~/Asset/img/@Html.DisplayFor(modelItem => item.Thumnail)" /></td>
+                            <td>@Html.DisplayFor(modelItem => item.LoaiKhachSan)</td>
+                            <td>@string.Format("{0:#,##0}", Html.DisplayFor(modelItem => item.GiaNguoiLon))</td>
+                            <td>@string.Format("{0:#,##0}", Html.DisplayFor(modelItem => item.GiaTreEm))</td>
+                            <td>@string.Format("{0:#,##0}", Html.DisplayFor(modelItem => item.GiaTreNho))</td>
+                            <td>@string.Format("{0:#,##0}", Html.DisplayFor(modelItem => item.GiaSoSinh))</td>
+                            <td>@string.Format("{0:#,##0}", Html.DisplayFor(modelItem => item.PhuThuPhongRieng))</td>
+                            <td>@Html.DisplayFor(modelItem => item.SoKhachToiDa)</td>
+                            <td>@Html.DisplayFor(modelItem => item.LuotXem)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                            <td>
+                                @Html.ActionLink("Edit", "EditTours", new { id = item.ID }) <br />
+                                @*@Html.ActionLink("Details", "Details", new { id = item.ID })*@ <br />
+                                @Html.ActionLink("Delete", "DeleteTours", new { id = item.ID })
+                            </td>
+                        </tr>
+                         }
+                        
+
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TieuDe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThoiGian)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayKhoiHanh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaDiemKhoiHanh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaNguoiLon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChiTiet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Thumnail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiKhachSan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaTreEm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaTreNho)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaSoSinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoKhachToiDa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LuotXem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoNgayDi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoNgayDiShort)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TieuDe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThoiGian)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayKhoiHanh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaDiemKhoiHanh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaNguoiLon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChiTiet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Thumnail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoaiKhachSan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaTreEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaTreNho)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaSoSinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoKhachToiDa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LuotXem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoNgayDi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoNgayDiShort)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>*@

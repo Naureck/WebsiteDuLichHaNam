@@ -1,0 +1,41 @@
+﻿/*Setting button in Pages Admin*/
+    .btn-create-list
+    {
+        background-color: #0094ff;
+        color: white;
+        padding: 10px, 20px, 10px, 20px;
+        width: 8%;
+    }
+
+    .btn-create-list:hover
+    {
+        background-color: #2b52c5;
+        color: white;
+    }
+
+    .title-BTL
+    {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .btn-save-list
+    {
+        background-color: #0094ff;
+        color: white;
+        padding: 10px, 20px, 10px, 20px;
+        width: 8%;
+    }
+
+    .btn-save-list:hover
+    {
+        background-color: #2b52c5;
+        color: white;
+    }
+
+    .img-tbl
+    {
+        width: 115px;
+        height: 115px;
+    }

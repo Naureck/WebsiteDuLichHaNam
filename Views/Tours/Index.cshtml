@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutHNS.cshtml";
+    var tours = ViewBag.toursDL;
+}
+
+<div class="title-in-tour">
+    <h2>Tour Du Lịch</h2>
+</div>
+
+<div class="bg-show-tours">
+    <div class="bg-in-tours">
+        @foreach (var item in tours)
+        { 
+        <div class="tags-tours-bg">
+            <div class="tags-tours-in">
+                <div class="img-show-tour"><img src="~/Asset/img/@item.Thumnail" /></div>
+
+                <div class="details-about-tour">
+                    <span class="details-tours-time">@string.Format("{0:dd/MM/yyyy}", item.NgayKhoiHanh) - @item.SoNgayDiShort - Giờ khởi hành: @item.ThoiGian</span> @*Ngày, tháng tours*@
+                    <a href="../Tours/Details/@item.ID"><h4>@item.TieuDe</h4></a>
+                    <span class="title-location-begin"><b>Địa điểm khởi hành:</b>@item.DiaDiemKhoiHanh</span> @*Giờ khởi hành*@
+                    <div class="amout-seat">Số chỗ còn : <span class="alert-danger">@item.SoKhachToiDa</span></div>
+                    <div class="title-price">@string.Format("{0:#,##0}", item.GiaNguoiLon) vnđ</div>
+                </div>
+
+                <div class="btn-booking">
+                    <a class="btn-order-tour" href="../Tours/Booking/@item.ID">Đặt ngay</a>
+                </div>
+            </div>
+        </div>
+        }
+         
+    </div>
+</div>
+

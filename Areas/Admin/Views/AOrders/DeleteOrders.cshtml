@@ -1,0 +1,239 @@
+﻿@model HaNamSite.Models.EF.Order
+
+@{
+    ViewBag.Title = "DeleteOrders";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h3>Bạn muốn xóa dòng dữ liệu này không ?</h3>
+
+<div class="container-fluid">
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Users</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.IDTour)</th>
+                            <th>@Html.DisplayNameFor(model => model.IdKH)</th>
+                            <th>@Html.DisplayNameFor(model => model.HoTen)</th>
+                            <th>@Html.DisplayNameFor(model => model.SDT)</th>
+                            <th>@Html.DisplayNameFor(model => model.Email)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachLon)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachTreEm)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachTreNho)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachSoSinh)</th>
+                            <th>@Html.DisplayNameFor(model => model.TongSoKhach)</th>
+                            <th>@Html.DisplayNameFor(model => model.TongGia)</th>
+                            <th>@Html.DisplayNameFor(model => model.GhiChu)</th>
+                            <th>@Html.DisplayNameFor(model => model.HutThuoc)</th>
+                            <th>@Html.DisplayNameFor(model => model.PhongTangCao)</th>
+                            <th>@Html.DisplayNameFor(model => model.TreEmHieuDong)</th>
+                            <th>@Html.DisplayNameFor(model => model.AnChay)</th>
+                            <th>@Html.DisplayNameFor(model => model.PhuNuCoThai)</th>
+                            <th>@Html.DisplayNameFor(model => model.NguoiKhuyetTat)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.DisplayFor(model => model.IDTour)</td>
+                            <td>@Html.DisplayFor(model => model.IdKH)</td>
+                            <td>@Html.DisplayFor(model => model.SDT)</td>
+                            <td>@Html.DisplayFor(model => model.Email)</td>
+                            <td>@Html.DisplayFor(model => model.SoKhachLon)</td>
+                            <td>@Html.DisplayFor(model => model.SoKhachTreEm)</td>
+                            <td>@Html.DisplayFor(model => model.SoKhachTreNho)</td>
+                            <td>@Html.DisplayFor(model => model.SoKhachSoSinh)</td>
+                            <td>@Html.DisplayFor(model => model.TongSoKhach)</td>
+                            <td>@Html.DisplayFor(model => model.TongGia)</td>
+                            <td>@Html.DisplayFor(model => model.GhiChu)</td>
+                            <td>@Html.DisplayFor(model => model.HutThuoc)</td>
+                            <td>@Html.DisplayFor(model => model.PhongTangCao)</td>
+                            <td>@Html.DisplayFor(model => model.TreEmHieuDong)</td>
+                            <td>@Html.DisplayFor(model => model.AnChay)</td>
+                            <td>@Html.DisplayFor(model => model.PhuNuCoThai)</td>
+                            <td>@Html.DisplayFor(model => model.NguoiKhuyetTat)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div style="margin-bottom: 64px" class="form-actions no-color">
+                        <input type="submit" value="Delete" class="btn btn-default" /> |
+                        @Html.ActionLink("Back to List", "Index")
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@*<h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Order</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.IDTour)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IDTour)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.IdKH)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IdKH)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.HoTen)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HoTen)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SDT)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SDT)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SoKhachLon)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SoKhachLon)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SoKhachTreEm)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SoKhachTreEm)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SoKhachTreNho)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SoKhachTreNho)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SoKhachSoSinh)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SoKhachSoSinh)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.GhiChu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.GhiChu)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TongGia)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TongGia)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TongSoKhach)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TongSoKhach)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.HutThuoc)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HutThuoc)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PhongTangCao)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PhongTangCao)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TreEmHieuDong)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TreEmHieuDong)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AnChay)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AnChay)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NguoiKhuyetTat)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NguoiKhuyetTat)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PhuNuCoThai)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PhuNuCoThai)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>*@

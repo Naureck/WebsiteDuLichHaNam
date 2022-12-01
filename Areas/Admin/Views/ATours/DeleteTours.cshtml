@@ -1,0 +1,220 @@
+﻿@model HaNamSite.Models.EF.TourDuLich
+
+@{
+    ViewBag.Title = "DeleteTours";
+    Layout = "~/Views/Shared/LayoutMenuOr.cshtml";
+}
+
+
+<h3>Bạn muốn xóa dòng dữ liệu này không ?</h3>
+
+<div class="container-fluid">
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Tours Du Lịch</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.TieuDe)</th>
+                            <th>@Html.DisplayNameFor(model => model.ThoiGian)</th>
+                            <th>@Html.DisplayNameFor(model => model.NgayKhoiHanh)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoNgayDi)</th>
+                            <th>@Html.DisplayNameFor(model => model.DiaDiemKhoiHanh)</th>
+                            <th>@Html.DisplayNameFor(model => model.ChiTiet)</th>
+                            <th>@Html.DisplayNameFor(model => model.Thumnail)</th>
+                            <th>@Html.DisplayNameFor(model => model.LoaiKhachSan)</th>
+                            <th>@Html.DisplayNameFor(model => model.GiaNguoiLon)</th>
+                            <th>@Html.DisplayNameFor(model => model.GiaTreEm)</th>
+                            <th>@Html.DisplayNameFor(model => model.GiaTreNho)</th>
+                            <th>@Html.DisplayNameFor(model => model.GiaSoSinh)</th>
+                            <th>@Html.DisplayNameFor(model => model.PhuThuPhongRieng)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachToiDa)</th>
+                            <th>@Html.DisplayNameFor(model => model.LuotXem)</th>
+                            <th>@Html.DisplayNameFor(model => model.Status)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.DisplayFor(model => model.TieuDe)</td>
+                            <td>@Html.DisplayFor(model => model.ThoiGian)</td>
+                            <td>@Html.DisplayFor(model => model.NgayKhoiHanh)</td>
+                            <td>@Html.DisplayFor(model => model.SoNgayDi)</td>
+                            <td>@Html.DisplayFor(model => model.DiaDiemKhoiHanh)</td>
+                            <td>@Html.DisplayFor(model => model.ChiTiet)</td>
+                            <td>@Html.DisplayFor(model => model.Thumnail)</td>
+                            <td>@Html.DisplayFor(model => model.LoaiKhachSan)</td>
+                            <td>@Html.DisplayFor(model => model.GiaNguoiLon)</td>
+                            <td>@Html.DisplayFor(model => model.GiaTreEm)</td>
+                            <td>@Html.DisplayFor(model => model.GiaTreNho)</td>
+                            <td>@Html.DisplayFor(model => model.GiaSoSinh)</td>
+                            <td>@Html.DisplayFor(model => model.PhuThuPhongRieng)</td>
+                            <td>@Html.DisplayFor(model => model.SoKhachToiDa)</td>
+                            <td>@Html.DisplayFor(model => model.LuotXem)</td>
+                            <td>@Html.DisplayFor(model => model.Status)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div style="margin-bottom: 64px" class="form-actions no-color">
+                        <input type="submit" value="Delete" class="btn btn-default" /> |
+                        @Html.ActionLink("Back to List", "Index")
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@*<div>
+    <h4>TourDuLich</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TieuDe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TieuDe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThoiGian)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThoiGian)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayKhoiHanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayKhoiHanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaDiemKhoiHanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaDiemKhoiHanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaNguoiLon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaNguoiLon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChiTiet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChiTiet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thumnail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thumnail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoaiKhachSan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiKhachSan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaTreEm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaTreEm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaTreNho)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaTreNho)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaSoSinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaSoSinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoKhachToiDa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoKhachToiDa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LuotXem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LuotXem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoNgayDi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoNgayDi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoNgayDiShort)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoNgayDiShort)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>*@

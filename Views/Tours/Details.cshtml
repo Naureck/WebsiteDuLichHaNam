@@ -1,0 +1,172 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/LayoutMenuOr.cshtml";
+}
+@model HaNamSite.Models.EF.KetNoiTours_Orders
+
+
+<div class="bg-show-details-tours">
+    <div class="bg-show-details-tours-in">
+        <div class="row">
+            <div class="col-md-6 col-12 left tags-title-tours">
+                <h1 class="title">@Model.tours.TieuDe</h1>
+            </div>
+            <div class="col-md-6 col-12 right tags-price-vs-btn">
+                <div class="group-price">
+                    <div class="origin-price ">Giá: <span>@string.Format("{0:#,##0}", Model.tours.GiaNguoiLon) vnđ</span> / khách</div>
+                    <div class="sale-price"><span>@string.Format("{0:#,##0}", Model.tours.GiaTreEm) vnđ</span> / khách</div>
+                </div>
+
+                <div class="group-btn-cart">
+                    <a href="../Booking/@Model.tours.ID" class="add-cart">Đặt ngay</a>
+                    <a href="#" class="sup-btn" id="myBtn">Liên hệ tư vấn</a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-show-img-tours">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 col-sm-12 left">
+                    <img src="~/Asset/img/nui-cam-ha-nam-1_1631417423.jpg" class="img-show-tour-left" />
+                    <div class="bg-details-tour">
+                        <div class="tags-details-tour-in">
+                            <div class="info-tour">
+                                <p>Khởi hành <b>@string.Format("{0:dd/MM/yyyy}", Model.tours.NgayKhoiHanh)</b></p>
+                                <p>Thời gian <b>@Model.tours.SoNgayDiShort</b></p>
+                                <p>Nơi khởi hành <b>@Model.tours.DiaDiemKhoiHanh</b></p>
+                                <p>Số chỗ còn nhận <b>@Model.tours.SoKhachToiDa</b></p>
+                            </div>
+
+                            <div class="group-service">
+                                <div class="item item-service">
+                                    <i class="fa fa-flag-o fa-3x" aria-hidden="true"></i>
+                                    <label>Thời gian</label>
+                                    <p>@Model.tours.SoNgayDi</p>
+                                </div>
+
+                                <div class="item item-service">
+                                    <i class="fa fa-car fa-3x" aria-hidden="true"></i>
+                                    <label>Phương tiện di chuyển</label>
+                                    <p>Máy bay và xe du lịch</p>
+                                </div>
+
+                                <div class="item item-service">
+                                    <i class="fa fa-map-o fa-3x" aria-hidden="true"></i>
+                                    <label>Điểm tham quan</label>
+                                    <p>3 điểm tham quan ngoài trời</p>
+                                </div>
+
+                                <div class="item item-service">
+                                    <i class="fa fa-fire fa-3x" aria-hidden="true"></i>
+                                    <label>Ẩm thực</label>
+                                    <p>Theo thực đơn</p>
+                                </div>
+
+                                @*Service 2*@
+                                <div class="item item-service">
+                                    <i class="fa fa-building-o fa-3x" aria-hidden="true"></i>
+                                    <label>Khách sạn</label>
+                                    <p>@Model.tours.LoaiKhachSan</p>
+                                </div>
+
+                                <div class="item item-service">
+                                    <i class="fa fa-clock-o fa-3x" aria-hidden="true"></i>
+                                    <label>Thời gian lý tưởng</label>
+                                    <p>Quanh năm</p>
+                                </div>
+
+                                <div class="item item-service">
+                                    <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+                                    <label>Đối tượng</label>
+                                    <p>Dành cho nhóm nhỏ hoặc lớn</p>
+                                </div>
+
+                                <div class="item item-service">
+                                    <i class="fa fa-exchange fa-3x" aria-hidden="true"></i>
+                                    <label>Ưu đãi</label>
+                                    <p>Ưu đãi có trong tour</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-sm-12 right">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 big"><img src="~/Asset/img/du-lich-ha-nam-4_1623851410.jpg" class="img-show-tour-right" /></div>
+                        <div class="col-md-12 col-sm-12 big"><img src="~/Asset/img/083627-internet-hang-lu-n.jpg" class="img-show-tour-right" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-route">
+            <div class="title-mid-tour">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <h2 class="title-map-route">Lịch trình</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-map-route">
+                <div class="info-map-route-in">
+                    <div class="row">
+                        <div class="col-md-4 col-12 left">
+                            <div class="day day-01">
+                                <div class="wrapper content-show-info-route">
+                                    <div class="date-left">Ngày</div>
+                                    <div class="date-center active">1</div>
+                                    <div class="date-right">
+                                        <span class="date">18/05/2022</span>
+                                        <span class="location">TP.Hà Nam - Kẽm Trống (ăn sáng, trưa, chiều)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day day-02">
+                                <div class="wrapper content-show-info-route">
+                                    <div class="date-left">Ngày</div>
+                                    <div class="date-center active">2</div>
+                                    <div class="date-right">
+                                        <span class="date">19/05/2022</span>
+                                        <span class="location">TP.Hà Nam - Hang Luồng (ăn sáng, trưa, chiều)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 col-12 right timeline">
+                            <div>
+                                <h2 id="day-01">Ngày 1 - TP.Hà Nam - Kẽm Trống (ăn sáng, trưa, chiều)</h2>
+
+                                <div style="text-align: justify">
+                                    <p style="font-size: 16px">
+                                        Quý khách tập trung tại sân bay Cần Thơ để bắt đầu chuyến đi ra TP.Hà Nam. Đến nơi quý khách sẽ được sắp xếp vào khách sạn để nhận phòng sau đó sẽ đi ăn sáng và tham quan: <br />
+                                        <b>- Kẽm Trống</b>: với lịch sử 300 năm.....
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h2 id="day-01">Ngày 2 - TP.Hà Nam - Hang Luồng (ăn sáng, trưa, chiều)</h2>
+
+                                <div style="text-align: justify">
+                                    <p style="font-size: 16px">
+                                        Quý khách tập trung tại sân bay Cần Thơ để bắt đầu chuyến đi ra TP.Hà Nam. Đến nơi quý khách sẽ được sắp xếp vào khách sạn để nhận phòng sau đó sẽ đi ăn sáng và tham quan: <br />
+                                        <b>- Kẽm Trống</b>: với lịch sử 300 năm.....
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

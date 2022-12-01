@@ -1,0 +1,1631 @@
+.wrapper
+{
+    margin-top: 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.bg-bodyindex
+{
+    width: 100%;
+    background: rgb(255, 255, 255);
+    
+    height: 100%;
+    text-align: center;
+}
+
+.bg-local-1
+{
+    background-color: #fff7fe;
+}
+
+.bg-local-2
+{
+    background-color: #f0faff;
+}
+
+.bg-in-body
+{
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.bg-in-body h2
+{
+    text-align: center;
+    font-size: 28px;
+    line-height: 0px;
+    margin:50px 0 10px 0;
+    overflow-wrap: break-word;
+}
+
+h2 span 
+{ 
+    padding:0 10px; 
+}
+
+.body-tag-news
+{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+.body-tag-news .body-in-tag-news
+{
+    display: flex;
+    flex-direction: row; 
+    margin: auto;
+    transition: transform 0.3s linear;
+    overflow: hidden;
+    width: 1320px;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+.body-tag-news .body-in-tag-news .tags-news
+{
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    margin-left: 5px;
+    width: 340px;
+    height: auto;
+    max-height: 680px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px 5px 20px 5px;
+    transition: ease-in 0.2s;
+    border: 1px solid #dfdfdf;
+}
+
+.body-tag-news .body-in-tag-news .tags-news:hover
+{
+    box-shadow: 1px 1px 6px 3px rgb(81, 81, 81);
+}
+
+.body-in-tag-news .tags-news .sp-tag-news
+{
+    text-align: left;
+    padding: 10px;
+}
+
+.sp-tag-news .details-tours-time-home 
+{
+    font-size: 14px;
+    color: #565656;
+}
+
+.body-in-tag-news .tags-news .sp-tag-news a 
+{
+    text-decoration: none;
+    color: black;
+}
+
+.body-in-tag-news .tags-news .sp-tag-news h4
+{
+    font-weight: 700;
+    text-align:justify;
+    padding: 10px 0 10px 0;
+}
+
+.body-in-tag-news .tags-news .sp-tag-news div
+{
+    padding: 20px 0 10px 0;
+}
+
+.body-in-tag-news .tags-news .sp-tag-news a:hover
+{
+    color: #e16ef8;
+}
+
+.btn-order-tour-home
+{
+    padding: 6px 100px;
+    border-radius: 6px;
+    border: 1px solid #0028ff;
+    color: #0028ff;
+    background-color: white;
+    transition: 0.2s ease-in;
+    text-decoration: none;
+}
+
+.btn-order-tour-home:hover
+{
+    background-color: #4d4aef;
+    color: white;
+    text-decoration: none;
+}
+
+.title-price-home
+{
+    font-weight: 600;
+    font-size: 20px;
+    color: #ff4343;
+}
+
+.body-tag-news .body-in-tag-news .tags-news .pic-news img {
+    width: 100%;
+    height: 235px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+.btn-show-all
+{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.btn-show-all a
+{
+    text-decoration: none;
+    transition: 0.2s ease-in;
+    border-radius: 5px;
+    padding: 8px;
+    user-select: none;
+    color: #565656;
+    font-size: 16px;
+    border: 1px solid #cacaca;
+    background-color: #ffff;
+    
+}
+
+.btn-show-all a:hover
+{
+    color: #ddb100;
+    background-color: #565656;
+    border:1px solid #565656;
+}
+
+/*area-2*/
+.text-info-travel
+{
+    width: 50%;
+    height: 100%;
+    margin: 0 30px 0 30px
+}
+
+.details-about-info
+{
+    text-align: justify;
+    font-size: 18px;
+}
+
+.img-info-travel
+{
+    padding: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.img-info-in-bg
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.img-info-travel .img-in-info img 
+{
+
+    width: 100%;
+    height: 425px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.img-info-travel .img-in-info-map img
+{
+    width: 100%;
+    height: 100%;
+    min-height: 425px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    cursor:pointer;
+    z-index: 1999;
+}
+
+.modal 
+{
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1999; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      
+}
+
+.modal-content-map 
+{
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+}
+
+#caption 
+{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content-map, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom 
+{
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close-map 
+{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .close-map:hover,
+    .close-map:focus 
+    {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) 
+{
+    .modal-content-map 
+    {
+        width: 100%;
+    }
+}
+
+
+.img-info-travel .img-in-info-map img:hover
+{
+    border: 2px solid #2d41af;
+}
+
+.img-in-info:after {
+    content: '\A';
+    position: absolute;
+    width: 50%;
+    height: 425px;
+    margin-left: -595px;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    border-radius: 10px;
+    transition: all 0.5s;
+    max-width: 596px;
+    -webkit-transition: all 0.5s;
+}
+
+.img-in-info:hover:after
+{
+    opacity: 1;
+}
+
+
+/*ToursDuLich - style sheet*/
+
+.title-in-tour 
+{
+    padding: 30px 0 50px 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+}
+
+.bg-show-tours 
+{
+    margin: auto auto 30px auto;
+    border-top: 1px solid rgb(81, 81, 81, 0.3);
+    width: 95%;
+    height: 100%;
+    min-height: 1300px;
+}
+
+.bg-in-tours
+{
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.tags-tours-bg
+{
+    border-radius: 7px;
+    box-shadow: rgb(81, 81, 81,0.1) 0px 1px 1px 2px;
+    width: 313px;
+    height: 100%;
+    min-height: 586px;
+    margin: 10px auto 15px 33px;
+    transition: 1s ease;
+}
+
+.tags-tours-in:hover
+{
+    border-radius: 7px;
+    box-shadow: rgb(81, 81, 81, 0.4) 0px 1px 1px 2px;
+    margin-top: -1px;
+}
+
+.tags-tours-in
+{
+    width: 100%;
+    height: 100%;
+    min-height: 586px;
+}
+
+.tags-tours-in .img-show-tour img 
+{
+    width: 100%;
+    height: 270px;
+    border-radius: 7px 7px 0 0;
+    
+}
+
+.details-about-tour
+{
+    padding: 5px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+
+
+.details-about-tour a 
+{
+    text-decoration: none;
+    color: black;
+}
+
+.details-about-tour a:hover
+{
+    color: #3d3194;
+}
+
+.details-about-tour a h4
+{
+    font-family: 'Work Sans', sans-serif;
+    font-weight:bold;
+}
+
+.details-about-tour .details-tours-time {
+    color: #7e7e7e;
+}
+
+.details-about-tour .amout-seat
+{
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.details-about-tour .title-price
+{
+    margin: 30px 0;
+    color: #d40000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.btn-booking .btn-order-tour {
+/*    width: 50%;
+    height: 100%;*/
+    border: none;
+    padding: 10px 100px;
+    background-color: #006fcb;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.2s ease-in;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    text-decoration: none;
+}
+
+.btn-booking .btn-order-tour:hover
+{
+    background-color: #005ede;
+    text-decoration: none;
+    
+}
+
+/*ChiTietTours | Style Sheet*/
+
+.bg-show-details-tours
+{
+    margin: 30px auto 30px auto;
+    /*border: 1px solid;*/
+    width: 85%;
+    height: 100%;
+    min-height: 1300px;
+}
+
+.tags-title-tours h1
+{
+    text-align:justify;
+    font-size: 26px;
+    font-weight:bold;
+    margin-bottom: 10px;
+}
+
+.tags-price-vs-btn 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 25px;
+}
+
+.group-price
+{
+    
+    text-align: right;
+}
+
+.origin-price span
+{
+    font-size: 15px;
+    color:#368cff;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+.sale-price span
+{
+    font-size: 22px;
+    color: #ff3d3d;
+    font-weight: bold;
+}
+
+.group-btn-cart {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+}
+
+.group-btn-cart a
+{
+    text-decoration: none;
+}
+
+.add-cart 
+{
+    align-items: center;
+    background: linear-gradient(64.4deg, #368cff 21.33%, #0028ff 67.61%);
+    background-origin: padding-box;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    width: 192px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    transition: 1s ease-in;
+    margin-bottom: 10px;
+}
+
+.add-cart:hover
+{
+    color: white;
+    background: linear-gradient(64.4deg, #368cff 25.33%, #0028ff 87.61%);
+}
+
+.sup-btn
+{
+    color: #0028ff;
+    border: 2px solid #0028ff;
+    border-radius: 5px;
+    width: 192px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Arial;
+}
+
+.sup-btn:hover
+{
+    color: #0028ff;
+}
+/*ImageShowTour*/
+.bg-show-img-tours
+{
+    margin-top:20px;
+}
+
+.img-show-tour-left 
+{
+    border-radius: 10px;
+    height: 535px;
+    width: 100%;
+    object-fit: fill;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.img-show-tour-right
+{
+    border-radius: 10px;
+    height: 235px;
+    width: 100%;
+    object-fit:fill;
+    line-height: 24px;
+    height:100%;
+    margin-bottom: 20px;
+}
+
+.bg-details-tour
+{
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 100%;
+}
+
+.tags-details-tour-in
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.info-tour 
+{
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.group-service
+{
+    display: grid;
+    padding: 20px 15px 0 15px;
+    justify-content: space-around;
+    grid-row-gap: 30px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.item-service
+{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    max-width: 132px;
+}
+
+.item-service label
+{
+    margin-top: 10px;
+}
+
+.info-tour p {
+    padding: 0 15px 0 15px;
+}
+
+/*LichTrinh*/
+.info-map-route
+{
+    border-top: 1px solid #ebebeb;
+}
+
+.info-map-route-in
+{
+    padding-top: 40px;
+}
+
+.title-map-route {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 40px;
+}
+
+.day
+{
+    display: flex;
+    justify-content: space-around;
+    max-height:395px;
+    margin-bottom: 20px;
+}
+
+.day .content-show-info-route
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day .content-show-info-route div
+{
+    margin-right: 5px;
+}
+
+.date-left
+{
+    font-size: 20px;
+}
+
+.date-center {
+    background-color: #368cff;
+    border-radius: 150px;
+    padding: 5px 10px 5px 10px;
+    color: white;
+}
+
+.date-right {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.date-right .date
+{
+    font-weight: 700;
+}
+
+.date-right .location
+{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.timeline
+{
+    text-align: left;
+    border-left: 1px solid #ebebeb;
+}
+
+.timeline h2
+{
+    font-size: 22px;
+    font-weight: 700;
+}
+/*DiaDiemDuLich | Style Sheet*/
+.content-in-local 
+{
+    margin: auto;
+    text-align: justify;
+    width: 610px;
+    height: 100px;
+}
+
+.tags-local-bg 
+{
+    border-radius: 6px;
+    box-shadow: rgb(81, 81, 81,0.1) 0px 1px 1px 2px;
+    width: 313px;
+    height: 421px;
+    margin: 10px auto 10px 33px;
+}
+
+.tags-local-in .img-show-local img
+{
+    border-radius: 10px 10px 0 0;
+    width: 310px;
+    height: 300px;
+}
+
+.local
+{ 
+    padding: 20px 0 20px 0;
+    text-align: center; 
+}
+
+.local a
+{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.local a:hover
+{
+    color:#4d4aef;
+}
+
+/*BookingTour || StyleSheet*/
+
+.booking-tours
+{
+    width: 100%;
+    height: 100%;
+    min-height: 1220px;
+}
+
+.checkout-head-in
+{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #808080;
+    font-weight: bold;
+}
+
+.checkout-head-in div
+{
+    padding: 20px 10px 20px 10px;
+}
+
+.active-text
+{
+    color: #0026ff;
+}
+
+.order-info-in
+{
+    display:flex;
+    flex-direction: row;
+}
+
+.title-in-info h3
+{
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.title-in-info2 h4
+{
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.info-contact-in-guest
+{
+    margin-bottom: 25px;
+}
+
+.info-contact-in-guest .form-info-contact-gst-bg
+{
+    background-color: #f9f9f9;
+    border-radius: 10px;
+
+}
+
+.info-contact-in-guest .form-info-contact-gst-bg .form-info-contact-gst
+{
+    padding: 30px;
+}
+
+.form-info-contact-gst-bg .form-info-contact-gst .group-form
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.group-form .txt-input-info-cus
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.group-form .txt-input-info-cus input
+{
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #e7e7e7;
+    width: 100%;
+    min-width: 325px;
+    max-width: 326px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: text;
+    box-sizing: border-box;
+    padding: 0 10px;
+    outline: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.group-form .txt-input-info-cus input:focus
+{
+    border: 2px solid #5DADE2;
+}
+
+.info-guest-booking {
+    text-align: left;
+    width: 70%;
+}
+
+.shortcut-info-bg
+{
+    margin-left: auto;
+    text-align: left;
+}
+
+.customer
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.customer .change-box
+{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    width: 100%;
+    min-width: 390px;
+    max-width: 392px;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    align-content: center;
+    margin-bottom: 10px;
+}
+
+.customer .change-box .change-box-title h4
+{
+    font-weight: 700;
+}
+
+.customer .change-box .change-box-number
+{
+    margin: auto 0 auto auto;
+}
+
+.customer .change-box .change-box-number span
+{
+    font-size: 25px;
+    padding:0 2px 0 2px;
+    font-weight: bold;
+}
+
+.customer .change-box .change-box-number .btn-cus
+{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.price-info-cus-bg /*B?ng giá*/
+{
+    width: 100%;
+    min-width: 419px;
+    max-width: 819px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+
+}
+
+.price-info-cus-bg .price-info-cus-in-row
+{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.price-info-cus-bg .price-info-cus-in-row .price-cus-title
+{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-info-cus-bg .price-info-cus-in-row .price-cus-title span
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.price-info-cus-bg .price-info-cus-in-row .left-cus-price
+{
+    margin-left: auto;
+    text-align: left;
+}
+
+.customer-details-bg /* b?ng thông tin khách hàng*/
+{
+    width: 100%;
+    min-width: 418px;
+    max-width: 819px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.customer-details-bg .customer-details-in
+{
+    padding: 10px;
+}
+
+.customer-details-bg .customer-details-in .tbl-cus-details
+{
+    width: 100%;
+    min-width: 818px;
+    max-width: 819px;
+}
+
+.tbl-cus-details .row-in-tbl-cus-title .txt-in-row
+{
+    text-align: left;
+    padding: 5px;
+}
+
+.tbl-cus-details .row-in-tbl-cus-title .txt-in-row p
+{
+    font-weight:bold;
+}
+
+.row-in-tbl-cus-title select 
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+select::-ms-expand 
+{
+    display: none;
+}
+
+.txt-in-row input[type=checkbox]
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    margin-left: -30px;
+    width: 115px;
+    height: 20px;
+    z-index: 50;
+}
+
+.room-check
+{
+  display: inline-block;
+  position:relative;
+  cursor:pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  user-select: none;
+  margin-top: 5px;
+  margin-left: 30px;
+  font-size: 18px;
+}
+
+.checkmark 
+{
+  position:absolute;
+  margin-left: -30px;
+  width:20px;
+  height:20px;
+  border: 1px solid #0028ff;
+  border-radius:50%;
+  transition: 0.2s ease-in;
+}
+
+.room-check:hover .checkmark 
+{
+    background: #4d4aef;
+}
+
+.checkmark:after 
+{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.room-check input:checked ~ .checkmark 
+{
+    background: #4d4aef;
+}
+
+.room-check input:checked ~ .checkmark:after 
+{
+    display: block;
+}
+
+.room-check .checkmark:after
+{
+  top:50%;
+  left:50%;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform:translate(-50%,-50%) rotate(45deg);
+}
+
+.note-by-customer-bg
+{
+    width: 100%;
+    min-width: 418px;
+    max-width: 819px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.note-by-customer-in
+{
+    width: 100%;
+    padding: 20px;
+}
+
+.note-by-customer-in .check-note-customer
+{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.note-by-customer-in .check-note-customer .checker-mark
+{
+    width: 200px;
+    padding: 10px;
+    font-size: 13px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+    -webkit-box-align: center;
+    align-items: center;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    color: #212529;
+    display: inline-block;
+}
+
+.checker-mark .check-more
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 25px;
+    width: 50px;
+    left: 0;
+    top: 1px;
+    z-index: 50;
+}
+
+
+.checker-mark:hover .check-box-cus
+{
+    background-color:#0028ff;
+}
+
+.check-box-cus
+{
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    border: 1px solid #7d8fab;
+    transition: 0.2s ease;
+
+}
+
+.checker-mark input:checked ~ .check-box-cus
+{
+    background-color: #0028ff;
+}
+
+.checker-mark input:checked ~ .check-box-cus:after
+{
+    display:block;
+}
+
+.check-box-cus:after
+{
+    content: "";
+    position: absolute;
+    color: #fff;
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform:translate(-50%,-50%) rotate(45deg);
+}
+
+
+
+
+/*Tóm t?t thông tin chuy?n ?i*/
+
+.shortcut-info-bg
+{
+    border: 1px solid #d5d5d5;
+    margin-top: 80px;
+    margin-left: 25px;
+    width: 100%;
+    max-height: 850px;
+    min-height: 500px;
+}
+
+.shortcut-info-bg .shortcut-info-in
+{
+    padding: 20px;
+}
+
+.shortcut-title-in-info h3
+{
+     font-weight: 600;
+     margin-bottom: 20px;
+}
+
+.shortcut-info-bg .shortcut-info-in .shortcut-info-tour
+{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.shortcut-info-bg .shortcut-info-in .shortcut-info-tour .shortcut-info-tour-img img
+{
+    width: 100px;
+    height: 56px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.shortcut-info-bg .shortcut-info-in .shortcut-date-go
+{
+    margin-bottom: 20px;
+}
+
+.shortcut-info-bg .shortcut-info-in .shortcut-date-go h4
+{
+    color: #212529;
+    font-size: 13px;
+}
+
+.shortcut-info-bg .shortcut-info-in .shortcut-date-go .date-tour
+{
+    font-weight: bold;
+    font-size: 18px;
+    color: #4d4aef;
+    display: flex;
+    flex-direction: column;
+}
+
+.shortcut-info-bg .shortcut-info-in .shortcut-date-go .date-start
+{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.shortcut-info-bg .shortcut-info-in .shortcut-date-go .date-start div
+{
+    left: 0;
+    margin-left: 10px;
+}
+
+.shortcut-info-bg .shortcut-info-in .shortcut-date-go .date-end
+{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.shortcut-info-bg .shortcut-info-in .shortcut-date-go .date-end div
+{
+    left: 0;
+    margin-left: 10px;
+}
+
+.ic-arrow-tours
+{
+    opacity: 0.8;
+}
+
+.shortcut-details-tour tr
+{
+    vertical-align: middle;
+}
+
+.shortcut-details-tour
+{
+    width: 100%;
+    max-width: 300px;
+    overflow:hidden;
+    
+}
+
+.shortcut-details-tour table tbody tr
+{
+    margin: 20px 0 20px 0;
+}
+
+.title-in-short-details
+{
+    width: 50%;
+    max-width: 150px;
+    font-size: 18px;
+    color:#312b57;
+}
+
+.title-in-short-details-small
+{
+    width: 50%;
+    max-width: 150px;
+    font-size: 15px;
+    color: #6372ee;
+}
+
+.shortcut-details-tour .number-in-short-details
+{
+    width: 100%;
+    height: 100%;
+    min-height: 50px;
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+
+.shortcut-details-tour .btn-order-quick
+{
+    margin-top: 10px;
+     width: 100%;
+     height: 50px;
+     color: white;
+     font-weight: bold;
+    background-image: linear-gradient(to bottom right, #ec2424, #f46464);
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+.shortcut-details-tour .btn-order-quick:hover
+{
+    background-image: linear-gradient(to bottom right, #d62525, #e16565);
+}
+
+
+/*Location details infomation*/
+.location-details-bg
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.location-details-bg .location-details-in
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.location-details-bg .location-details-in .location-info-details
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.location-details-in .location-info-details .location-title-details
+{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    background-color: #162451;
+    border-radius: 10px;
+    color: white;
+}
+
+.location-details-in .location-info-details .location-details-img img
+{
+    width: 100%;
+    height: 100%;
+    max-width: 682px;
+    height: 442px;
+    border-radius: 12px;
+    margin: 20px 0 20px 0;
+}
+
+.location-details-in .location-info-details .location-details-img
+{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 682px;
+}
+
+.location-details-in .location-info-details .location-details-img:after 
+{
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 442px;
+    margin-top: 20px;
+    margin-left: -683px;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    border-radius: 10px;
+    transition: all 0.5s;
+    max-width: 682px;
+    -webkit-transition: all 0.5s;
+}
+
+.location-details-in .location-info-details .location-details-img:hover:after
+{
+    opacity: 1;
+}
+
+.location-details-in .location-info-details .location-details-content
+{
+    padding: 20px;
+    color: white;
+    background-color:#162451;
+    font-size: 16px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 782px;
+    text-align: justify;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/*Payments StyleSheet*/
+.payment-info-bg
+{
+    margin: 0 auto;
+    width: 75%;
+    margin-top: 20px;
+    background-color: #212121;
+    border-radius: 20px;
+    border: 5px solid #d64813;
+}
+
+.payment-info-bg .payment-info-in
+{
+    padding: 20px;
+    color: white;
+}
+
+.title-in-payment
+{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.pay-info-tours-group
+{
+    display: flex;
+    flex-direction: row;
+    align-content:center;
+    vertical-align: middle;
+}
+
+.title-in-payment span
+{
+    margin-right: 20px;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 2px;
+}
+
+.title-in-payment h4
+{
+    font-weight: bold;
+    color: #ef8946;
+    margin-left: 50px;
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+/*Payment for banking*/
+.payment-choose-bg
+{
+    margin: 0 auto;
+    width: 75%;
+    margin-top: 20px;
+    background-color: #393939;
+    border-radius: 20px;
+    border: 5px solid #0b8e13;
+    margin-bottom: 30px;
+}
+
+.payment-choose-bg .payment-choose-in
+{
+    padding: 20px;
+    color: white;
+}
+
+.title-in-payment
+{
+    margin-left: 20px;
+}
+
+.payment-choose-bg .payment-choose-in .payment-for-banking-online
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.payment-banking-group
+{
+    margin-left: 20px;
+}
+
+.payment-banking-group h4
+{
+    text-align: left;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.payment-banking-group .payment-banking-info
+{
+    text-align: left;
+}
+
+.payment-banking-group .payment-banking-info .img-info-banking
+{
+    margin-bottom: 20px;
+}
+
+.payment-banking-group .payment-banking-info .img-info-banking img
+{
+    width: 145px;
+    height: 135px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.payment-banking-group .payment-banking-info .img-info-banking img:hover
+{
+    border: 1px solid #162451;
+}
+
+.payment-banking-info .payment-details-banking
+{
+    display: none;
+    background-color: #212121;
+    border-radius: 20px;
+    max-width: 1130px;
+}
+
+.payment-details-banking-2 
+{
+    display: none;
+    background-color: #212121;
+    border-radius: 20px;
+    max-width: 700px;
+    text-align: justify;
+}
+
+.payment-details-banking-in
+{
+    padding: 20px;
+}
+
+.payment-details-banking .payment-details-banking-in div
+{
+    margin-bottom: 10px;
+}
+
+.payment-details-banking .payment-details-banking-in .info-details-payment-banking
+{
+    display:flex;
+    flex-direction:column;
+}
+
+.payment-details-banking .payment-details-banking-in .info-details-payment-banking .details-banking
+{
+    font-size: 18px;
+}
+
+.payment-details-banking .payment-details-banking-in .img-info-details-payment-banking
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-details-banking .payment-details-banking-in .img-info-details-payment-banking span
+{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.payment-details-banking .payment-details-banking-in .img-info-details-payment-banking img
+{
+    width: 380px;
+    height: 378px;
+}
+
+
+
+.info-details-payment-banking .tbl-details-banking table {
+    width: 100%;
+    min-width: 336px;
+}
+
+.info-details-payment-banking .tbl-details-banking th
+{
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.payment-btn-success
+{
+    margin-top: 30px;
+    text-align: right;
+}
+
+.payment-btn-success a
+{
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #4d4aef;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.content-short 
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}

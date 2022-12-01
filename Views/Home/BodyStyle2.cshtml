@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "BodyStyle2";
+    Layout = "~/Views/Shared/LayoutHNS.cshtml";
+}
+@model HaNamSite.Models.EF.DiaDiem
+@using HaNamSite.Models.EF
+<div class="bg-in-body bg-local-1">
+    <div class="body-tag-news">
+        <div class="body-in-tag-news">
+
+            <div class="img-info-travel">
+                <div class="img-info-in-bg">
+                    <div class="img-in-info">
+                        <img src="~/Asset/img/du-lich-ha-nam-2_1623851344.jpg" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-info-travel">
+                <div><h3>@Model.TenDiaDiem</h3></div>
+                <div class="details-about-info"><p>@Model.Mota</p></div>
+                <div class="btn-show-all"><a href="../Location/Details/@Model.ID">Xem thêm</a></div>
+                <div class="btn-show-all"><a href="@Url.Action("Index", "Location")">Xem địa điểm khác</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+

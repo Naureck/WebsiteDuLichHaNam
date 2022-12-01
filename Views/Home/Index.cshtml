@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutHNS.cshtml";
+    var tours = ViewBag.Tours;
+    var location = ViewBag.Location;
+    var tourshot = ViewBag.ToursHot;
+}
+
+<div class="bg-in-body bg-local-1">
+    <h2><span>Tour Du Lịch</span></h2>
+
+    <div class="body-tag-news">
+        <div class="body-in-tag-news">
+            @foreach (var item in tours)
+            {
+                <div class="tags-news ">
+                    <a class="pic-news" href="#"><img src="~/Asset/img/@item.Thumnail" /></a>
+                    <div class="sp-tag-news">
+                        <span class="details-tours-time-home">@string.Format("{0:dd/MM/yyyy}", item.NgayKhoiHanh) -
+                            @item.SoNgayDiShort - Giờ khởi hành: @item.ThoiGian</span>
+                        <a href="../Tours/Details/@item.ID">
+                            <h4>@item.TieuDe</h4>
+                        </a>
+                        <span class="title-location-begin-home"><b>Địa điểm khởi hành:</b> @item.DiaDiemKhoiHanh</span>
+                        @*Giờ khởi hành*@
+                        <div class="title-price-home">@string.Format("{0:#,##0}", item.GiaNguoiLon) vnđ</div>
+                    </div>
+
+                    <div class="btn-booking-home">
+                        <a href="../Tours/Details/@item.ID" class="btn-order-tour-home" type="submit">Đặt ngay</a>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+    <div class="btn-show-all"><a href="@Url.Action("Index", "Tours")">Xem thêm</a></div>
+</div>
+
+<div class="bg-in-body bg-local-2">
+    <h2><span>Tour Du Lịch Nổi Bật</span></h2>
+    <div class="body-tag-news">
+        <div class="body-in-tag-news">
+            @foreach (var item in tourshot)
+            {
+                <div class="tags-news ">
+                    <a class="pic-news" href="#"><img src="~/Asset/img/@item.Thumnail" /></a>
+                    <div class="sp-tag-news">
+                        <span class="details-tours-time-home">@string.Format("{0:dd/MM/yyyy}", item.NgayKhoiHanh) -
+                            @item.SoNgayDiShort - Giờ khởi hành: @item.ThoiGian</span>
+                        <a href="../Tours/Details/@item.ID">
+                            <h4>@item.TieuDe</h4>
+                        </a>
+                        <span class="title-location-begin-home"><b>Địa điểm khởi hành:</b> @item.DiaDiemKhoiHanh</span>
+                        @*Giờ khởi hành*@
+                        <div class="title-price-home">@string.Format("{0:#,##0}", item.GiaNguoiLon) vnđ</div>
+                    </div>
+
+                    <div class="btn-booking-home">
+                        <a href="../Tours/Details/@item.ID" class="btn-order-tour-home" type="submit">Đặt ngay</a>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+    <div class="btn-show-all"><a href="@Url.Action("Index", "Tours")">Xem thêm</a></div>
+</div>
+
+<div class="bg-in-body bg-local-1">
+    <h2><span>Địa Điểm Thú Vị</span></h2>
+    @foreach (var item in location)
+    {
+        <div class="body-tag-news">
+            <div class="body-in-tag-news">
+                <div class="text-info-travel">
+                    <div>
+                        <h3>@item.TenDiaDiem</h3>
+                    </div>
+                    <div class="details-about-info">
+                        <p class="content-short">@item.Mota</p>
+                    </div>
+                    <div class="btn-show-all"><a href="../Location/Details/@item.ID">Xem thêm</a></div>
+                    <div class="btn-show-all"><a href="@Url.Action("Index", "Location")">Xem địa điểm khác</a></div>
+                </div>
+                <div class="img-info-travel">
+                    <div class="img-info-in-bg">
+                        <div class="img-in-info">
+                            <img src="~/Asset/img/@item.Img" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div class="bg-in-body bg-local-2">
+    <div class="body-tag-news">
+        <div class="body-in-tag-news">
+
+            <div class="text-info-travel left">
+                <div class="video-in-info">
+                    <video width="590" height="450" controls controlsList="nodownload">
+                        <source src="~/Asset/videos/DuLichHaNam(New).mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+
+            <div class="img-info-travel right">
+                <div class="img-info-in-bg">
+                    <div class="img-in-info-map">
+                        <img id="img-map" style="margin-top: 20px;" src="~/Asset/img/MapDuLichHaNam.png"
+                            alt="Ha Nam Map" />
+                        <div id="modal-in-map" class="modal">
+
+                            <!-- The Close Button -->
+                            <span class="close-map">&times;</span>
+
+                            <!-- Modal Content (The Image) -->
+                            <img class="modal-content-map" id="img01">
+
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,247 @@
+﻿@model IEnumerable<HaNamSite.Models.EF.Order>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<style>
+    .content-short {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+    }
+</style>
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Quản Lý Đơn Hàng</h1>
+    <p class="mb-4">
+        
+    </p>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>@Html.DisplayNameFor(model => model.IDTour)</th>
+                            <th>@Html.DisplayNameFor(model => model.IdKH)</th>
+                            <th>@Html.DisplayNameFor(model => model.HoTen)</th>
+                            <th>@Html.DisplayNameFor(model => model.SDT)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachLon)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachTreEm)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachTreNho)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachSoSinh)</th>
+                            <th>@Html.DisplayNameFor(model => model.TongSoKhach)</th>
+                            <th>@Html.DisplayNameFor(model => model.TongGia)</th>
+                            <th>@Html.DisplayNameFor(model => model.GhiChu)</th>
+                            <th>@Html.DisplayNameFor(model => model.HutThuoc)</th>
+                            <th>@Html.DisplayNameFor(model => model.PhongTangCao)</th>
+                            <th>@Html.DisplayNameFor(model => model.NguoiKhuyetTat)</th>
+                            <th>@Html.DisplayNameFor(model => model.AnChay)</th>
+                            <th>@Html.DisplayNameFor(model => model.TreEmHieuDong)</th>
+                            <th>@Html.DisplayNameFor(model => model.PhuNuCoThai)</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>STT</th>
+                            <th>@Html.DisplayNameFor(model => model.IDTour)</th>
+                            <th>@Html.DisplayNameFor(model => model.IdKH)</th>
+                            <th>@Html.DisplayNameFor(model => model.HoTen)</th>
+                            <th>@Html.DisplayNameFor(model => model.SDT)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachLon)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachTreEm)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachTreNho)</th>
+                            <th>@Html.DisplayNameFor(model => model.SoKhachSoSinh)</th>
+                            <th>@Html.DisplayNameFor(model => model.TongSoKhach)</th>
+                            <th>@Html.DisplayNameFor(model => model.TongGia)</th>
+                            <th>@Html.DisplayNameFor(model => model.GhiChu)</th>
+                            <th>@Html.DisplayNameFor(model => model.HutThuoc)</th>
+                            <th>@Html.DisplayNameFor(model => model.PhongTangCao)</th>
+                            <th>@Html.DisplayNameFor(model => model.NguoiKhuyetTat)</th>
+                            <th>@Html.DisplayNameFor(model => model.AnChay)</th>
+                            <th>@Html.DisplayNameFor(model => model.TreEmHieuDong)</th>
+                            <th>@Html.DisplayNameFor(model => model.PhuNuCoThai)</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            int i = 1;
+                        <tr>
+                            <td>@Convert.ToString(i)</td>
+                            <td>@Html.DisplayFor(modelItem => item.IDTour)</td>
+                            <td>@Html.DisplayFor(modelItem => item.IdKH)</td>
+                            <td>@Html.DisplayFor(modelItem => item.HoTen)</td>
+                            <td>@Html.DisplayFor(modelItem => item.SDT)</td>
+                            <td>@Html.DisplayFor(modelItem => item.SoKhachLon)</td>
+                            <td>@Html.DisplayFor(modelItem => item.SoKhachTreEm)</td>
+                            <td>@Html.DisplayFor(modelItem => item.SoKhachTreNho)</td>
+                            <td>@Html.DisplayFor(modelItem => item.SoKhachSoSinh)</td>
+                            <td>@Html.DisplayFor(modelItem => item.TongSoKhach)</td>
+                            <td>@Html.DisplayFor(modelItem => item.TongGia)</td>
+                            <td><p class="content-short">@Html.DisplayFor(modelItem => item.GhiChu)</p></td>
+                            <td>@Html.DisplayFor(modelItem => item.HutThuoc)</td>
+                            <td>@Html.DisplayFor(modelItem => item.PhongTangCao)</td>
+                            <td>@Html.DisplayFor(modelItem => item.NguoiKhuyetTat)</td>
+                            <td>@Html.DisplayFor(modelItem => item.AnChay)</td>
+                            <td>@Html.DisplayFor(modelItem => item.TreEmHieuDong)</td>
+                            <td>@Html.DisplayFor(modelItem => item.PhuNuCoThai)</td>
+                            <td>
+                                @*@Html.ActionLink("Edit", "EditLocations", new { id = item.ID }) <br />*@
+                                @*@Html.ActionLink("Details", "Details", new { id = item.ID })*@ <br />
+                                @Html.ActionLink("Delete", "DeleteOrders", new { id = item.ID })
+                            </td>
+                        </tr>
+                            i++;
+                        }
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDTour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoKhachLon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoKhachTreEm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoKhachTreNho)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoKhachSoSinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GhiChu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TongGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TongSoKhach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HutThuoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhongTangCao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TreEmHieuDong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnChay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NguoiKhuyetTat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhuNuCoThai)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDTour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoTen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SDT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoKhachLon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoKhachTreEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoKhachTreNho)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoKhachSoSinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GhiChu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TongGia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TongSoKhach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HutThuoc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhongTangCao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TreEmHieuDong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnChay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NguoiKhuyetTat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhuNuCoThai)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("DeleteOrders", "AOrders", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>*@

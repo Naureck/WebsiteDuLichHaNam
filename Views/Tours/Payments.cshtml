@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewBag.Title = "Payments";
+    Layout = "~/Views/Shared/LayoutMenuOr.cshtml";
+    var pay = ViewBag.payment;
+    var tours = ViewBag.tours;
+}
+
+<div class="booking-tours">
+    <div class="checkout-head">
+        <div class="container">
+            <div class="row">
+                <div class="checkout-head-in">
+                    <div class="text-head-checkout active-text">1. Nhập thông tin</div>
+                    <div><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                    <div class="text-head-checkout active-text">2. Thanh toán</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-info-bg">
+            <div class="payment-info-in">
+                <div class="pay-info-tours-group">
+                    <i class="fa fa-list-alt fa-3x" aria-hidden="true"></i>
+                    <div class="title-in-payment">
+                        <span>Tên Tour: </span>
+                        <span>Thời gian khởi hành: </span>
+                        <span>Địa điểm khởi hành: </span>
+                        <span>Ngày khởi hành: </span>
+                        <span>Tổng số hành khách: </span>
+                        <span>Phụ thu phòng riêng: </span>
+                        <span class="ative-title">Tổng số tiền: </span>
+                    </div>
+
+                    <div class="title-in-payment">
+
+                        <h4>Ao Dong - Hang Luồn - Núi Cấm</h4>
+                        <h4>18:00</h4>
+                        <h4>Tp.Cần Thơ</h4>
+                        <h4>26/06/2022</h4>
+                        <h4>1</h4>
+                        <h4>800,000 đ</h4>
+                        <h4 class="active-num">5,800,000 đ</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="payment-choose-bg">
+            <div class="payment-choose-in">
+                <div class="direct-payment">
+
+                </div>
+
+                <div class="payment-for-banking-online">
+                    <i class="fa fa-university fa-3x" aria-hidden="true"></i>
+                    <div class="payment-banking-group">
+                        <h4>Thanh Toán</h4>
+                        <div class="payment-banking-info">
+                            <div class="img-info-banking">
+                                <img id="show-payment" src="~/Asset/img/LogoBanking/logo_VCB_828891.jpg" />
+                                <img id="close-btn" src="~/Asset/img/LogoBanking/195-1951339_payment-computer-icons-money-logo-payment-terms-icon.png" />
+                            </div>
+
+                            <div class="payment-details-banking" id="show-box">
+                                <div class="payment-details-banking-in">
+                                    <div class="info-details-payment-banking">
+                                        <div class="details-banking">Thanh toán qua ngân hàng <b>Vietcombank</b></div>
+                                        <div class="tbl-details-banking">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th style="color: #3b932a">STK</th>
+                                                        <th style="color: #3b932a">Tên người nhận</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>0111000340099</th>
+                                                        <th>HUYNH THY</th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="img-info-details-payment-banking">
+                                        <span>*Quý khách có thẻ quét mã QR để thanh toán nhanh chóng</span>
+                                        <img src="~/Asset/img/LogoBanking/Vietcombank-QR.jpg" />
+                                    </div>
+                                    <div style="color: #dd4444">*Lưu ý: Quý khách vui lòng thanh toán trước ngày đi.</div>
+                                </div>
+
+                            </div>
+
+                            <div class="payment-details-banking-2" id="show-box-2">
+                                <div class="payment-details-banking-in">
+                                    <div class="info-details-payment-banking">
+                                        <div class="details-banking"><b>Thanh toán trực tiếp</b></div>
+                                    </div>
+
+                                    <div class="img-info-details-payment-banking">
+                                        <span style="overflow: hidden">Quý khách vui lòng thanh toán trực tiếp tại địa chỉ:
+                                            <b>
+                                                Số 10, đường số 08, khu dân cư Long Thịnh, Phường Phú Thứ, Quận Cái Răng, Thành phố Cần Thơ
+                                            </b></span>
+                                    </div>
+                                    <div style="color: #dd4444">*Lưu ý: Quý khách vui lòng thanh toán trước ngày đi.</div>
+                                </div>
+
+                            </div>
+                        </div>       
+                    </div>
+
+                </div>
+
+                <div class="payment-btn-success">
+                    <a href="@Url.Action("Index", "Home")" class="btn">Hoàn thành</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
